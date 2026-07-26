@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Daniel — Builder</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== 3D BACKGROUND CANVAS ===== -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- ===== NAV ===== -->
+    <nav>
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo">Daniel<span>.</span></a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#work">Work</a></li>
+                <li><a href="#stack">Stack</a></li>
+                <li><a href="mailto:hello@daniel.dev" class="nav-cta">Let's Talk</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">✦ Builder</div>
+                <h1>
+                    I build things<br>
+                    that <span class="highlight">work</span>.
+                </h1>
+                <p>
+                    No team. No funding. Just code. I build real products — from AI that learns
+                    physics, to social platforms that respect privacy.
+                </p>
+                <div class="hero-actions">
+                    <a href="#work" class="btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                        See My Work
+                    </a>
+                    <a href="mailto:hello@daniel.dev" class="btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        hello@daniel.dev
+                    </a>
+                </div>
+
+                <!-- Floating stats -->
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">Live Products</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="100">0</span>
+                        <span class="stat-label">% Solo Built</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">Languages</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-orb" id="heroOrb">
+                    <div class="orb-ring"></div>
+                    <div class="orb-ring"></div>
+                    <div class="orb-ring"></div>
+                    <div class="orb-core">⟠</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WORK ===== -->
+    <section id="work">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">✦ Projects</span>
+                <h2 class="section-title">Things I've built.</h2>
+                <p class="section-desc">
+                    Two live products. Both built solo. Both working right now.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project 1: NEXUS-MM -->
+                <div class="project-card" data-project="nexusmm">
+                    <div class="project-glow"></div>
+                    <span class="project-badge">AI / Robotics</span>
+                    <h3>NEXUS-MM</h3>
+                    <p>
+                        A world model AI that learns physics from scratch — and tells robots
+                        when to stop and go. No dataset. No pretraining. Just raw learning.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>PyTorch</span>
+                        <span>RL</span>
+                        <span>World Models</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.nexusmm.site/" target="_blank" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Live Site
+                        </a>
+                        <a href="#" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            pip install nexus-mm-sdk
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Nexus World -->
+                <div class="project-card" data-project="nexusworld">
+                    <div class="project-glow"></div>
+                    <span class="project-badge">Social Platform</span>
+                    <h3>Nexus World</h3>
+                    <p>
+                        Privacy-first social platform with contextual layers. Be different
+                        versions of yourself in one app — no one sees what they shouldn't.
+                    </p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>PWA</span>
+                        <span>Firebase</span>
+                        <span>AI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://nexusworld.life" target="_blank" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Live Site
+                        </a>
+                        <a href="#" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STACK ===== -->
+    <section id="stack">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">✦ Stack</span>
+                <h2 class="section-title">What I use.</h2>
+                <p class="section-desc">
+                    The tools I reach for when building real things.
+                </p>
+            </div>
+
+            <div class="stack-grid">
+                <div class="stack-item">
+                    <span class="stack-icon">🐍</span>
+                    Python
+                </div>
+                <div class="stack-item">
+                    <span class="stack-icon">⚡</span>
+                    JavaScript
+                </div>
+                <div class="stack-item">
+                    <span class="stack-icon">🔥</span>
+                    PyTorch
+                </div>
+                <div class="stack-item">
+                    <span class="stack-icon">☁️</span>
+                    Firebase
+                </div>
+                <div class="stack-item">
+                    <span class="stack-icon">📱</span>
+                    PWA
+                </div>
+                <div class="stack-item">
+                    <span class="stack-icon">🎨</span>
+                    HTML/CSS
+                </div>
+                <div class="stack-item">
+                    <span class="stack-icon">🔧</span>
+                    Git
+                </div>
+                <div class="stack-item">
+                    <span class="stack-icon">🚀</span>
+                    Vercel
+                </div>
+                <div class="stack-item">
+                    <span class="stack-icon">🔗</span>
+                    REST APIs
+                </div>
+                <div class="stack-item">
+                    <span class="stack-icon">🧠</span>
+                    World Models
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIAL ===== -->
+    <section id="testimonial">
+        <div class="container">
+            <div class="testimonial">
+                <div class="testimonial-quote">"</div>
+                <p>
+                    I built NEXUS-MM — a world model AI that learns physics from scratch — completely solo. No team. No funding. Just months of building.
+                </p>
+                <div class="testimonial-footer">— Daniel, Builder</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container footer-inner">
+            <span class="footer-copy">© 2026 Daniel. Built from scratch.</span>
+            <div class="footer-socials">
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="mailto:hello@daniel.dev">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
