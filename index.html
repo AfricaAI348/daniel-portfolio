@@ -1,138 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Daniel — Builder</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
-
-<style>
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #0c0c0c;
-    color: white;
-}
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.hero {
-    padding: 80px 0;
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-}
-
-.hero h1 {
-    font-size: 48px;
-}
-
-.highlight {
-    color: orange;
-}
-
-.hero-visual {
-    display: flex;
-    justify-content: center;
-}
-
-.photo-daniel {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid rgba(255,255,255,0.1);
-}
-
-.avatar-photo {
-    width: 100%;
-    height: 100%;
-}
-
-/* Mobile */
-@media(max-width:768px){
-    .hero-grid{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-}
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Daniel — Builder</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<section class="hero">
-<div class="container hero-grid">
+    <canvas id="bgCanvas"></canvas>
 
-<!-- TEXT -->
-<div>
-    <h1>I build things <br> that <span class="highlight">work</span>.</h1>
-    <p>No team. No funding. Just code.</p>
-</div>
+    <nav>
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo">Daniel<span>.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#work">Work</a></li>
+                <li><a href="#stack">Stack</a></li>
+                <li><a href="mailto:toolworxsec@gmail.com" class="nav-cta">Let's Talk</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-<!-- VISUAL -->
-<div class="hero-visual">
+    <section class="hero" id="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">✦ Builder</div>
+                <h1>I build things<br>that <span class="highlight">work</span>.</h1>
+                <p>I build real products — from AI that helps robots understand the real world, to social platforms that respect privacy. No team. No funding. Just code.</p>
+                <div class="hero-actions">
+                    <a href="#work" class="btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                        See My Work
+                    </a>
+                    <a href="mailto:toolworxsec@gmail.com" class="btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        toolworxsec@gmail.com
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">Live Products</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="100">0</span>
+                        <span class="stat-label">% Built From Scratch</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">Languages</span>
+                    </div>
+                </div>
+            </div>
 
-<div class="photo-daniel">
+            <div class="hero-visual">
+                <div class="hero-orb" id="heroOrb">
+                    <div class="orb-ring"></div>
+                    <div class="orb-ring"></div>
+                    <div class="orb-ring"></div>
+                    
+                    <!-- ===== YOUR PHOTO GOES HERE ===== -->
+                    <div class="orb-core photo-daniel">
+                        <img src="YOUR_PHOTO_URL_HERE" alt="Daniel" class="avatar-photo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- 🔥 YOUR CODED IMAGE -->
-<svg viewBox="0 0 400 500" class="avatar-photo" xmlns="http://www.w3.org/2000/svg">
+    <section id="work">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">✦ Projects</span>
+                <h2 class="section-title">Things I've built.</h2>
+                <p class="section-desc">Two live products. Both built from scratch. Both working right now.</p>
+            </div>
 
-    <!-- Wall -->
-    <rect width="400" height="500" fill="#d6cbb8"/>
+            <div class="projects-grid">
+                <div class="project-card" data-project="nexusmm">
+                    <div class="project-glow"></div>
+                    <span class="project-badge">AI / Robotics</span>
+                    <h3>NEXUS-MM</h3>
+                    <p>A world model AI that helps robots understand how the real world works — making them safer and smarter in their environment. Built to learn physics from scratch.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>PyTorch</span>
+                        <span>RL</span>
+                        <span>World Models</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.nexusmm.site/" target="_blank" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Live Site
+                        </a>
+                        <a href="#" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            pip install nexus-mm-sdk
+                        </a>
+                    </div>
+                </div>
 
-    <!-- Ground -->
-    <rect y="350" width="400" height="150" fill="#b8a98c"/>
+                <div class="project-card" data-project="nexusworld">
+                    <div class="project-glow"></div>
+                    <span class="project-badge">Social Platform</span>
+                    <h3>Nexus World</h3>
+                    <p>Privacy-first social platform with contextual layers. Be different versions of yourself in one app — no one sees what they shouldn't. <strong>Works offline. Installable on any device.</strong></p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>Firebase</span>
+                        <span>Offline-First</span>
+                        <span>AI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://nexusworld.life" target="_blank" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Live Site
+                        </a>
+                        <a href="#" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Bike -->
-    <circle cx="110" cy="380" r="35" fill="#111"/>
-    <circle cx="290" cy="380" r="35" fill="#111"/>
-    <rect x="140" y="310" width="120" height="20" fill="#444" rx="5"/>
+    <section id="stack">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">✦ Stack</span>
+                <h2 class="section-title">What I use.</h2>
+                <p class="section-desc">The tools and capabilities I build with.</p>
+            </div>
+            <div class="stack-grid">
+                <div class="stack-item"><span class="stack-icon">🐍</span> Python</div>
+                <div class="stack-item"><span class="stack-icon">⚡</span> JavaScript</div>
+                <div class="stack-item"><span class="stack-icon">🔥</span> PyTorch</div>
+                <div class="stack-item"><span class="stack-icon">☁️</span> Firebase</div>
+                <div class="stack-item"><span class="stack-icon">🎨</span> HTML/CSS</div>
+                <div class="stack-item"><span class="stack-icon">📱</span> Offline-First</div>
+                <div class="stack-item"><span class="stack-icon">🧠</span> AI Integration</div>
+                <div class="stack-item"><span class="stack-icon">🚀</span> Vercel</div>
+                <div class="stack-item"><span class="stack-icon">🔧</span> Git</div>
+                <div class="stack-item"><span class="stack-icon">🔗</span> REST APIs</div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Body -->
-    <!-- Legs -->
-    <rect x="150" y="360" width="40" height="120" fill="#1e4ed8" rx="10"/>
-    <rect x="210" y="360" width="40" height="120" fill="#1e4ed8" rx="10"/>
+    <section id="testimonial">
+        <div class="container">
+            <div class="testimonial">
+                <div class="testimonial-quote">"</div>
+                <p>I built NEXUS-MM — a world model AI that helps robots understand the real world, making them safer and smarter. No team. No funding. Just months of building.</p>
+                <div class="testimonial-footer">— Daniel, Builder</div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Shirt -->
-    <rect x="140" y="260" width="120" height="100" fill="#0f5132" rx="20"/>
+    <footer>
+        <div class="container footer-inner">
+            <span class="footer-copy">© 2026 Daniel. Built from scratch.</span>
+            <div class="footer-socials">
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="mailto:toolworxsec@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Logo -->
-    <circle cx="200" cy="310" r="35" fill="#39ff14"/>
-    <text x="200" y="318" font-size="28" fill="white" text-anchor="middle">LV</text>
-
-    <!-- Arms -->
-    <rect x="130" y="280" width="20" height="100" fill="#8d5524" rx="10"/>
-    <rect x="250" y="280" width="20" height="100" fill="#8d5524" rx="10"/>
-
-    <!-- Head -->
-    <circle cx="200" cy="220" r="45" fill="#c68642"/>
-
-    <!-- Hair -->
-    <rect x="155" y="170" width="90" height="40" fill="#111" rx="20"/>
-
-    <!-- Eyes -->
-    <circle cx="185" cy="215" r="5" fill="#000"/>
-    <circle cx="215" cy="215" r="5" fill="#000"/>
-
-    <!-- Mouth -->
-    <path d="M185 240 Q200 250 215 240" stroke="#000" stroke-width="2" fill="none"/>
-
-</svg>
-
-</div>
-</div>
-
-</div>
-</section>
-
+    <script src="script.js"></script>
 </body>
 </html>
