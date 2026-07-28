@@ -383,7 +383,7 @@ nav {
 }
 
 /* ========================================
-   HERO ORB WITH CARTOON AVATAR
+   HERO ORB - REAL PHOTO VERSION
    ======================================== */
 .hero-visual {
     display: flex;
@@ -433,204 +433,28 @@ nav {
     border-color: rgba(255, 107, 0, 0.04);
 }
 
-.orb-ring:nth-child(4) {
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    animation-duration: 50s;
-    animation-direction: reverse;
-    border-color: rgba(255, 107, 0, 0.02);
-}
-
-/* ===== CARTOON DANIEL AVATAR ===== */
-.orb-core.avatar-daniel {
+/* ===== REAL PHOTO AVATAR ===== */
+.orb-core.photo-daniel {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #2d1b0e, #1a0f08);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
     z-index: 2;
+    border: 3px solid rgba(255, 107, 0, 0.3);
+    box-shadow: 0 0 60px rgba(255, 107, 0, 0.15), inset 0 0 60px rgba(255, 107, 0, 0.05);
     animation: pulse 4s ease-in-out infinite;
-    overflow: visible;
+    background: #1a0f08;
 }
 
-/* Hair */
-.avatar-hair {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 140px;
-    height: 55px;
-    background: #1a1a2e;
-    border-radius: 50% 50% 0 0;
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
-    z-index: 5;
-}
-
-.avatar-hair-side {
-    position: absolute;
-    width: 35px;
-    height: 75px;
-    background: #1a1a2e;
-    top: -12px;
-    z-index: 4;
-}
-
-.avatar-hair-side.left {
-    left: 18px;
-    transform: rotate(12deg);
-    border-radius: 0 50% 50% 0;
-}
-
-.avatar-hair-side.right {
-    right: 18px;
-    transform: rotate(-12deg);
-    border-radius: 50% 0 0 50%;
-}
-
-/* Face */
-.avatar-face {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    background: radial-gradient(circle at 40% 30%, #f5cba0, #e8b88a);
-    border-radius: 50%;
-    z-index: 3;
-    margin-top: 15px;
-    box-shadow: inset 0 -10px 30px rgba(0,0,0,0.1);
-}
-
-/* Eyes */
-.avatar-eyes {
-    position: absolute;
-    top: 32%;
-    left: 10%;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    z-index: 4;
-}
-
-.eye {
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-radius: 50%;
-    position: relative;
-    box-shadow: inset 0 2px 6px rgba(0,0,0,0.15);
-}
-
-.eye .pupil {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #2d1b0e;
-    border-radius: 50%;
-    bottom: 2px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Eyebrows */
-.avatar-eyebrows {
-    position: absolute;
-    top: 20%;
-    left: 8%;
-    width: 84%;
-    display: flex;
-    justify-content: space-between;
-    z-index: 5;
-}
-
-.eyebrow {
-    width: 24px;
-    height: 4px;
-    background: #2d1b0e;
-    border-radius: 4px;
-}
-
-.eyebrow.left {
-    transform: rotate(-8deg);
-}
-
-.eyebrow.right {
-    transform: rotate(8deg);
-}
-
-/* Smile */
-.avatar-smile {
-    position: absolute;
-    bottom: 22%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 35px;
-    height: 16px;
-    border-bottom: 3px solid #c0392b;
-    border-radius: 0 0 50% 50%;
-    z-index: 4;
-}
-
-/* Cheeks */
-.avatar-cheek {
-    position: absolute;
-    width: 22px;
-    height: 14px;
-    background: rgba(255, 150, 150, 0.35);
-    border-radius: 50%;
-    bottom: 30%;
-    z-index: 3;
-}
-
-.avatar-cheek.left {
-    left: 6%;
-}
-
-.avatar-cheek.right {
-    right: 6%;
-}
-
-/* Body / Shoulders */
-.avatar-body {
-    position: absolute;
-    bottom: -45px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 85px;
-    height: 55px;
-    background: linear-gradient(180deg, #1a1a2e, #0d0d1a);
-    border-radius: 0 0 16px 16px;
-    z-index: 1;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-}
-
-.avatar-shirt {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 45px;
-    height: 22px;
-    background: #2d1b0e;
-    border-radius: 4px;
-}
-
-.avatar-collar {
-    position: absolute;
-    top: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 22px;
-    height: 12px;
-    background: #3d2b1e;
-    clip-path: polygon(0 0, 50% 100%, 100% 0);
+.avatar-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* ========================================
@@ -976,37 +800,10 @@ footer {
         height: 240px;
     }
 
-    .orb-core.avatar-daniel {
-        width: 160px;
-        height: 160px;
+    .orb-core.photo-daniel {
+        width: 150px;
+        height: 150px;
     }
-
-    /* Avatar responsive */
-    .avatar-face {
-        width: 85px;
-        height: 85px;
-    }
-    .avatar-hair {
-        width: 100px;
-        height: 40px;
-        top: -15px;
-    }
-    .avatar-hair-side {
-        width: 25px;
-        height: 55px;
-    }
-    .avatar-hair-side.left { left: 12px; }
-    .avatar-hair-side.right { right: 12px; }
-    .avatar-eyes { top: 30%; }
-    .eye { width: 14px; height: 14px; }
-    .eye .pupil { width: 7px; height: 7px; }
-    .avatar-eyebrows { top: 18%; }
-    .eyebrow { width: 17px; height: 3px; }
-    .avatar-smile { width: 25px; height: 12px; bottom: 20%; }
-    .avatar-cheek { width: 16px; height: 10px; bottom: 28%; }
-    .avatar-body { width: 60px; height: 40px; bottom: -32px; }
-    .avatar-shirt { width: 32px; height: 16px; top: 6px; }
-    .avatar-collar { width: 16px; height: 9px; top: -2px; }
 
     .projects-grid {
         grid-template-columns: 1fr;
@@ -1107,39 +904,11 @@ footer {
         height: 180px;
     }
 
-    .orb-core.avatar-daniel {
-        width: 120px;
-        height: 120px;
+    .orb-core.photo-daniel {
+        width: 110px;
+        height: 110px;
+        border-width: 2px;
     }
-
-    /* Avatar extra small */
-    .avatar-face {
-        width: 65px;
-        height: 65px;
-        margin-top: 10px;
-    }
-    .avatar-hair {
-        width: 75px;
-        height: 30px;
-        top: -12px;
-    }
-    .avatar-hair-side {
-        width: 18px;
-        height: 40px;
-        top: -8px;
-    }
-    .avatar-hair-side.left { left: 8px; }
-    .avatar-hair-side.right { right: 8px; }
-    .avatar-eyes { top: 28%; }
-    .eye { width: 10px; height: 10px; }
-    .eye .pupil { width: 5px; height: 5px; }
-    .avatar-eyebrows { top: 16%; }
-    .eyebrow { width: 13px; height: 2px; }
-    .avatar-smile { width: 18px; height: 10px; bottom: 18%; border-width: 2px; }
-    .avatar-cheek { width: 12px; height: 8px; bottom: 26%; }
-    .avatar-body { width: 45px; height: 30px; bottom: -24px; }
-    .avatar-shirt { width: 24px; height: 12px; top: 4px; }
-    .avatar-collar { width: 12px; height: 7px; top: -2px; }
 
     .project-card {
         padding: 24px 20px 28px;
